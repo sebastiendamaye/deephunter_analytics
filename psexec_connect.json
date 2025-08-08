@@ -1,0 +1,24 @@
+{
+    "name": "psexec_connect",
+    "description": "Detects use of psexec",
+    "notes": "- To move around freely without attracting too much attention, attackers often use reliable software (one of the favorites is psexec) that looks normal in an enterprise environment.\r\n- Use the following aggregate to easily group by endpoint: `| group array_agg_distinct(dst.ip.address) by endpoint.name, src.process.cmdline`",
+    "pub_date": "2023-03-16T08:02:46.204Z",
+    "confidence": 2,
+    "relevance": 3,
+    "category": "detect",
+    "connector": "sentinelone",
+    "query": "endpoint.os = 'windows'\r\nand event.type = 'IP Connect'\r\nand src.process.name matches 'psexec\\\\.exe'",
+    "columns": "| columns event.time, event.type, site.name, agent.uuid, src.process.storyline.id, src.process.user, src.process.uid, src.process.cmdline, src.ip.address, src.port.number, dst.ip.address, dst.port.number, src.process.parent.cmdline, tgt.process.cmdline",
+    "emulation_validation": "",
+    "references": "https://theitbros.com/using-psexec-to-run-commands-remotely/\r\nhttps://redcanary.com/blog/threat-hunting-psexec-lateral-movement/",
+    "mitre_techniques": [
+        "T1569.002",
+        "T1570"
+    ],
+    "threats": [],
+    "actors": [],
+    "target_os": [
+        "windows"
+    ],
+    "vulnerabilities": []
+}
