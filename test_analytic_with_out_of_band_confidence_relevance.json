@@ -6,7 +6,7 @@
     "confidence": 7,
     "relevance": 10,
     "category": "triage",
-    "connector": "itdoesnotexist",
+    "connector": "sentinelone",
     "query": "",
     "columns": "",
     "emulation_validation": "",
