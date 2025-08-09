@@ -1,0 +1,24 @@
+{
+    "name": "test_analytic_invalid_json_format",
+    "description": "Test analytic with an invalid JSON format (missing coma after description field)"
+    "notes": "",
+    "pub_date": "2023-03-16T08:02:46.204Z",
+    "confidence": 2,
+    "relevance": 3,
+    "category": "detect",
+    "connector": "sentinelone",
+    "query": "endpoint.os = 'windows'\r\nand event.type = 'IP Connect'\r\nand src.process.name matches 'psexec\\\\.exe'",
+    "columns": "| columns event.time, event.type, site.name, agent.uuid, src.process.storyline.id, src.process.user, src.process.uid, src.process.cmdline, src.ip.address, src.port.number, dst.ip.address, dst.port.number, src.process.parent.cmdline, tgt.process.cmdline",
+    "emulation_validation": "",
+    "references": "https://theitbros.com/using-psexec-to-run-commands-remotely/\r\nhttps://redcanary.com/blog/threat-hunting-psexec-lateral-movement/",
+    "mitre_techniques": [
+        "T1569.002",
+        "T1570"
+    ],
+    "threats": [],
+    "actors": [],
+    "target_os": [
+        "windows"
+    ],
+    "vulnerabilities": []
+}
