@@ -1,7 +1,5 @@
 {
     "name": "test_minimum_info",
-    "confidence": 1,
-    "relevance": 2,
     "connector": "sentinelone",
     "query": "endpoint.os = 'windows'\r\nand event.type = 'File Creation'\r\nand tgt.file.path matches '\\\\Users\\\\.*?\\\\AppData\\\\Local\\\\Temp\\\\Temp1_'"
 }
