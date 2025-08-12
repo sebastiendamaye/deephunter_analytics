@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "description": "Uncompress activities of zip archives in the user temp folder",
+    "notes": "To be used with additional filters to analyze some extensions (e.g. vbs, js, etc)",
+    "confidence": 1,
+    "relevance": 2,
+    "category": "triage",
+    "connector": "sentinelone",
+    "query": "endpoint.os = 'windows'\r\nand event.type = 'File Creation'\r\nand tgt.file.path matches '\\\\Users\\\\.*?\\\\AppData\\\\Local\\\\Temp\\\\Temp1_'",
+    "columns": "| columns event.time, event.type, endpoint.name, src.process.user, src.process.name, src.process.image.sha1, src.process.cmdline, src.process.parent.name, src.process.parent.image.sha1, src.process.parent.cmdline, tgt.file.path, tgt.process.image.sha1, tgt.file.oldPath, tgt.process.image.path, tgt.process.cmdline, tgt.file.size, tgt.file.type, src.process.storyline.id",
+    "emulation_validation": "",
+    "references": "https://www.crowdstrike.com/blog/duck-hunting-with-falcon-complete-qakbot-countermeasures/",
+    "mitre_techniques": [
+        "T1204"
+    ],
+    "threats": ["QakBot"],
+    "actors": [],
+    "target_os": [
+        "windows"
+    ],
+    "vulnerabilities": []
+}
