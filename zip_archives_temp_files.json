@@ -1,8 +1,8 @@
 {
+    "version": 1,
     "name": "zip_archives_temp_files",
     "description": "Uncompress activities of zip archives in the user temp folder",
     "notes": "To be used with additional filters to analyze some extensions (e.g. vbs, js, etc)",
-    "pub_date": "2023-03-16T08:02:46.204Z",
     "confidence": 1,
     "relevance": 2,
     "category": "triage",

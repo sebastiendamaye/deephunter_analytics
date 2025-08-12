@@ -1,8 +1,8 @@
 {
+    "version": 1,
     "name": "test_analytic_without_query_field",
     "description": "Testing error management in repo manager",
     "notes": "",
-    "pub_date": "2023-03-16T08:02:46.204Z",
     "confidence": 2,
     "relevance": 3,
     "category": "threat hunting",

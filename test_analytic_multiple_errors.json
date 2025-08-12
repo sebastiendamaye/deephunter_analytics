@@ -1,8 +1,8 @@
 {
+    "version": 1,
     "name": "test_analytic_multiple_errors",
     "description": "Test analytic with multiple errors",
     "notes": "",
-    "pub_date": "202303-16T08:02:46.204Z",
     "confidence": 10,
     "relevance": -2,
     "category": "triage",

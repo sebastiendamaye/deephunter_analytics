@@ -1,8 +1,8 @@
 {
+    "version": 1,
     "name": "test_analytic_invalid_json_format",
     "description": "Test analytic with an invalid JSON format (missing coma after description field)"
     "notes": "",
-    "pub_date": "2023-03-16T08:02:46.204Z",
     "confidence": 2,
     "relevance": 3,
     "category": "detect",

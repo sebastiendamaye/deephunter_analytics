@@ -1,8 +1,8 @@
 {
+    "version": 1,
     "name": "psexec_connect",
     "description": "Detects use of psexec",
     "notes": "- To move around freely without attracting too much attention, attackers often use reliable software (one of the favorites is psexec) that looks normal in an enterprise environment.\r\n- Use the following aggregate to easily group by endpoint: `| group array_agg_distinct(dst.ip.address) by endpoint.name, src.process.cmdline`",
-    "pub_date": "2023-03-16T08:02:46.204Z",
     "confidence": 2,
     "relevance": 3,
     "category": "detect",
