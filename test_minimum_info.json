@@ -1,5 +1,5 @@
 {
     "name": "test_minimum_info",
     "connector": "sentinelone",
-    "query": "endpoint.os = 'windows'\r\nand event.type = 'File Creation'\r\nand tgt.file.path matches '\\\\Users\\\\.*?\\\\AppData\\\\Local\\\\Temp\\\\Temp1_'"
+    "query": "endpoint.os = 'windows'\r\nand event.category = 'file'\r\nand tgt.file.path contains:anycase '\\foo\\blah\\'"
 }
